@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelajaran Analisis & Desain Sistem (SAD) & UML</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Mermaid.js CDN for live UML Rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  
+  <!-- FontAwesome Icons for visual enhancement -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-section">
+        <div class="logo-icon">S</div>
+        <div class="logo-text">
+          <h1>SAD & UML</h1>
+          <span>Belajar dari Nol - Mahir</span>
+        </div>
+      </div>
+      
+      <!-- Progress Dashboard Card -->
+      <div class="progress-card">
+        <div class="progress-info">
+          <span>Progres Belajar</span>
+          <span id="progress-text">0% Completed</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+      </div>
+      
+      <!-- Navigation List -->
+      <ul class="module-nav-list" id="module-nav-list">
+        <!-- Links will be generated dynamically by app.js -->
+      </ul>
+    </aside>
+    
+    <!-- Main Content Wrapper -->
+    <main class="main-wrapper">
+      
+      <!-- Top Navigation Bar -->
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">&#9776;</button>
+        
+        <!-- Search bar -->
+        <div class="search-container">
+          <!-- Inline Search SVG Icon -->
+          <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" class="search-input" id="search-input" placeholder="Cari materi atau diagram (misal: use case, JAD)...">
+        </div>
+        
+        <!-- User status indicator badge -->
+        <div class="user-badge">
+          <div class="user-badge-avatar">SL</div>
+          <span>SAD Learner</span>
+        </div>
+      </header>
+      
+      <!-- Content Body -->
+      <div class="content-body fade-in-slide" id="content-body">
+        <!-- Dynamic content will be injected here by app.js -->
+      </div>
+      
+    </main>
+    
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

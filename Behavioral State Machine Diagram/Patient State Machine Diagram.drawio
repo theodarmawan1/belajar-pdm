@@ -1,0 +1,71 @@
+<mxfile host="Electron" modified="2024-01-16T16:40:01.054Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="t7OL7FR_5sdlQD2BUX2_" version="22.1.18" type="device">
+  <diagram name="Page-1" id="6DEpJB1E4joQfz46pMOB">
+    <mxGraphModel dx="1020" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NcIgUArI6LigLftkA7z8-1" value="" style="ellipse;fillColor=strokeColor;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="210" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-4" value="Enter Hospital&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="224.58" as="sourcePoint" />
+            <mxPoint x="200" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-6" value="Entering" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="195" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-7" value="CheckIn" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="320" y="224.58" as="sourcePoint" />
+            <mxPoint x="430" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-8" value="Admitted" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="430" y="195" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-9" value="Released" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="195" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-10" value="[Diagnosis = Healthy]" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="NcIgUArI6LigLftkA7z8-9" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="550" y="224.58" as="sourcePoint" />
+            <mxPoint x="660" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-11" value="Under Observation" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="425" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-12" value="[Diagnosis = Unhealthy]" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.442;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="NcIgUArI6LigLftkA7z8-8" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="435" y="300" as="sourcePoint" />
+            <mxPoint x="483" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-14" value="[Diagnosis = Healthy]" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="NcIgUArI6LigLftkA7z8-9" edge="1">
+          <mxGeometry x="0.3235" width="80" relative="1" as="geometry">
+            <mxPoint x="545" y="399.58000000000004" as="sourcePoint" />
+            <mxPoint x="675" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="740" y="400" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-16" value="[&amp;gt;2 Weeks]" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="800" y="224.58" as="sourcePoint" />
+            <mxPoint x="930" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-17" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
+          <mxGeometry x="930" y="210" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NcIgUArI6LigLftkA7z8-18" value="Patient State Machine" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=160;" parent="1" vertex="1">
+          <mxGeometry x="40" y="140" width="940" height="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

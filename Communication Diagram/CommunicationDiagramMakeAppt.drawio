@@ -1,0 +1,70 @@
+<mxfile host="Electron" modified="2023-12-31T13:49:46.287Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="nmpcKZ-Q4m0U3pxzN6cG" version="22.1.16" type="device">
+  <diagram name="Page-1" id="ofuqE0hQyFducC7XJHM0">
+    <mxGraphModel dx="544" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="160" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-5" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="160" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-6" value="&lt;b&gt;&lt;u&gt;aPatient:Patient&lt;/u&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="570" y="90" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-7" value="&lt;u&gt;&lt;b&gt;:UnpaidBill&lt;/b&gt;&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="605" y="270" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-8" value="&lt;b&gt;&lt;u&gt;:Appointment&lt;/u&gt;&lt;/b&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="570" y="400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-11" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="200" as="sourcePoint" />
+            <mxPoint x="340" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-12" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="b4jd7iJsmjVrkxtSUsgV-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="560" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-13" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="600" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-14" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="b4jd7iJsmjVrkxtSUsgV-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="570" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-15" value="1: RequestAppt(name, address) →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="150" y="140" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-17" value="2: LookUpPatient()→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-30;" vertex="1" parent="1">
+          <mxGeometry x="395" y="100" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-18" value="3: [Patient exists]:LookUpBills() →" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="435" y="210" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-19" value="← 4: NewCancelChangeAppt()&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="160" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-20" value="← 5: ApptTimes?()&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="175" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-21" value="6:MatchAppt()→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=45;" vertex="1" parent="1">
+          <mxGeometry x="480" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b4jd7iJsmjVrkxtSUsgV-22" value="7:CreateAppt()→" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=45;" vertex="1" parent="1">
+          <mxGeometry x="460" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
