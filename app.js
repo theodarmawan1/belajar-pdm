@@ -23,6 +23,12 @@ const moduleNavList = document.getElementById("module-nav-list");
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 
+// PDF Modal Elements
+const pdfModal = document.getElementById("pdf-modal");
+const pdfModalTitle = document.getElementById("pdf-modal-title");
+const pdfModalIframe = document.getElementById("pdf-modal-iframe");
+const pdfModalClose = document.getElementById("pdf-modal-close");
+
 // Initialize application
 document.addEventListener("DOMContentLoaded", () => {
   loadProgressFromStorage();
@@ -169,6 +175,9 @@ function loadModule(moduleId) {
   // Inject into DOM
   contentBody.innerHTML = html;
   
+  // Initialize embedded PDF viewers
+  initEmbeddedPdfViewers();
+  
   // Add animation class
   contentBody.classList.remove("fade-in-slide");
   void contentBody.offsetWidth; // Trigger reflow to restart animation
@@ -216,7 +225,7 @@ function loadModule(moduleId) {
   
   if (moduleId === "mod-15") {
     setTimeout(() => {
-      if (window.showPdfPage) window.showPdfPage(1);
+      if (window.showPdfPage) window.showPdfPage('pdf');
     }, 100);
   }
 }
@@ -346,6 +355,36 @@ function setupEventListeners() {
       loadModule(state.currentModuleId);
     }
   });
+
+  // PDF Modal Close Event
+  if (pdfModalClose) {
+    pdfModalClose.addEventListener("click", () => {
+      if (window.closePdfModal) window.closePdfModal();
+    });
+  }
+  
+  // PDF Modal Backdrop Click Event (Close when clicking outside container)
+  if (pdfModal) {
+    pdfModal.addEventListener("click", (e) => {
+      if (e.target === pdfModal) {
+        if (window.closePdfModal) window.closePdfModal();
+      }
+    });
+  }
+
+  // Intercept clicks on download cards ending with .pdf to open in embedded modal viewer
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".download-card");
+    if (card && card.getAttribute("href") && card.getAttribute("href").endsWith(".pdf")) {
+      e.preventDefault();
+      const filePath = card.getAttribute("href");
+      const fileNameSpan = card.querySelector(".download-file-name");
+      const title = fileNameSpan ? fileNameSpan.innerText : "Viewer Dokumen Asli";
+      if (window.openPdfModal) {
+        window.openPdfModal(title, filePath);
+      }
+    }
+  });
 }
 
 // Perform text search across all modules
@@ -430,9 +469,102 @@ window.showPdfPage = function(pageNum) {
   
   // Show target page
   const targetPage = document.getElementById(`pdf-page-${pageNum}`);
-  if (targetPage) targetPage.style.display = "block";
+  if (targetPage) {
+    targetPage.style.display = "block";
+    
+    // Lazy load iframe if it exists
+    const iframe = targetPage.querySelector("iframe[data-src]");
+    if (iframe && !iframe.src) {
+      iframe.src = iframe.getAttribute("data-src");
+    }
+  }
   
   // Activate target button
   const targetBtn = document.getElementById(`pdf-btn-${pageNum}`);
   if (targetBtn) targetBtn.classList.add("active");
 };
+
+// PDF Modal Open Helper
+window.openPdfModal = function(title, filePath) {
+  if (!pdfModal || !pdfModalTitle || !pdfModalIframe) return;
+  pdfModalTitle.innerText = title;
+  pdfModalIframe.src = filePath;
+  pdfModal.style.display = "flex";
+  void pdfModal.offsetWidth; // force reflow for transition
+  pdfModal.classList.add("show");
+};
+
+// PDF Modal Close Helper
+window.closePdfModal = function() {
+  if (!pdfModal || !pdfModalIframe) return;
+  pdfModal.classList.remove("show");
+  setTimeout(() => {
+    pdfModal.style.display = "none";
+    pdfModalIframe.src = ""; // Clear iframe source to release memory/stop loading
+  }, 300);
+};
+
+// Initialize Embedded PDF Viewers on the page
+function initEmbeddedPdfViewers() {
+  const viewers = document.querySelectorAll(".embedded-pdf-viewer");
+  viewers.forEach(viewer => {
+    const tabs = viewer.querySelectorAll(".pdf-viewer-tab");
+    const iframe = viewer.querySelector(".pdf-viewer-iframe");
+    const fallbackPane = viewer.querySelector(".pdf-viewer-fallback-pane");
+    const titleSpan = viewer.querySelector(".active-file-title");
+    const fullscreenBtn = viewer.querySelector(".btn-fullscreen-view");
+    const downloadLink = viewer.querySelector(".btn-download-file");
+    const fallbackDownloadLink = fallbackPane ? fallbackPane.querySelector(".btn-fallback-download") : null;
+
+    // Active tab initialization
+    const activeTab = viewer.querySelector(".pdf-viewer-tab.active");
+    if (activeTab) {
+      updateViewerPane(activeTab);
+    }
+
+    // Click handlers for tabs
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        updateViewerPane(tab);
+      });
+    });
+
+    function updateViewerPane(tab) {
+      const src = tab.getAttribute("data-src");
+      const title = tab.getAttribute("data-title") || "Viewer Dokumen Asli";
+      const type = tab.getAttribute("data-type") || "pdf";
+
+      // Update Title in the footer
+      if (titleSpan) titleSpan.innerText = `${title}.${type}`;
+
+      // Update Download Links
+      if (downloadLink) downloadLink.setAttribute("href", src);
+      if (fallbackDownloadLink) fallbackDownloadLink.setAttribute("href", src);
+
+      // Update Fullscreen button click handler
+      if (fullscreenBtn) {
+        fullscreenBtn.onclick = (e) => {
+          e.preventDefault();
+          if (window.openPdfModal) {
+            window.openPdfModal(title, src);
+          }
+        };
+      }
+
+      // Handle displaying content based on type (pdf vs docx)
+      if (type === "pdf") {
+        if (fallbackPane) fallbackPane.classList.add("hidden");
+        if (iframe) {
+          iframe.parentElement.classList.remove("hidden");
+          iframe.src = src;
+        }
+      } else {
+        // docx fallback
+        if (iframe) iframe.parentElement.classList.add("hidden");
+        if (fallbackPane) fallbackPane.classList.remove("hidden");
+      }
+    }
+  });
+}

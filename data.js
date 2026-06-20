@@ -412,12 +412,22 @@ ENDWHILE</pre>
       <div class="pdf-viewer-container">
         <!-- Tab Buttons -->
         <div class="pdf-tabs">
+          <button class="pdf-tab-btn" id="pdf-btn-pdf" onclick="showPdfPage('pdf')">📄 Dokumen PDF Asli</button>
           ${Array.from({length: 15}, (_, i) => i + 1).map(num => `
             <button class="pdf-tab-btn" id="pdf-btn-${num}" onclick="showPdfPage(${num})">Hal ${num}</button>
           `).join('')}
         </div>
 
         <!-- Tab Pages -->
+        <!-- DOKUMEN PDF ASLI -->
+        <div class="pdf-page-block" id="pdf-page-pdf" style="height: 700px; display: none;">
+          <div class="pdf-page-header">
+            <span>Berkas Dokumen Asli (png2pdf.pdf)</span>
+            <span class="pdf-page-num-badge">PDF Viewer</span>
+          </div>
+          <iframe class="pdf-viewer-iframe" data-src="png2pdf.pdf" width="100%" height="100%" style="border: 1px solid var(--border-glass); border-radius: var(--border-radius-md); background-color: #0b0f19;"></iframe>
+        </div>
+
         <!-- HALAMAN 1 -->
         <div class="pdf-page-block" id="pdf-page-1">
           <div class="pdf-page-header">
@@ -984,6 +994,45 @@ Close data_report</pre>
           </div>
         </div>
       </div>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-6">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Berkas Praktik Asli (CRC Cards)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/CRC Card Old patient.pdf" data-title="CRC Card Old Patient" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">CRC Card Old Patient</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Template CRC.pdf" data-title="Template CRC Card" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Template CRC Card</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-6" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-6">CRC Card Old Patient.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-6">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-6" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
@@ -1063,6 +1112,45 @@ flowchart TD
           </td>
         </tr>
       </table>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-7">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Berkas Praktik Asli (Use Cases)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/Manage Appartement Availability.pdf" data-title="Manage Appartement Availability" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Manage Appartement Availability</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Use Case Description Old patient appointment.pdf" data-title="Old Patient Appointment Desc" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Old Patient Appointment Desc</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-7" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-7">Manage Appartement Availability.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-7">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-7" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
@@ -1177,6 +1265,45 @@ classDiagram
     Borrower "1" --> "0..*" Book : meminjam
     Book "0..*" --> "1" BookCollection : bagian dari (Agregasi)
       </pre>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-9">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Diagram Kelas Asli (PDF)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/Class Diagram with Incorporated Pattern for the Library Book Collection System.drawio.pdf" data-title="Library Pattern Class Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Pattern Class Diagram</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Second-Cut Class Diagram for the Library Book Collection System.drawio.pdf" data-title="Second-Cut Class Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Second-Cut Class Diagram</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-9" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-9">Library Pattern Class Diagram.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-9">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-9" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
@@ -1309,6 +1436,53 @@ stateDiagram-v2
     UnderRepair --> [*] : [Buku Rusak Berat]
     Available --> [*] : [Buku Dihapus dari Sirkulasi]
       </pre>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-11">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Diagram State Asli (PDF)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/Book State Diagram.drawio.pdf" data-title="Book State Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Book State Diagram</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Lunch State Machine Diagram.drawio.pdf" data-title="Lunch State Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Lunch State Diagram</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Order State Machine.drawio.pdf" data-title="Order State Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Order State Diagram</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Patient State Machine Diagram.drawio.pdf" data-title="Patient State Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Patient State Diagram</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-11" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-11">Book State Diagram.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-11">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-11" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
@@ -1379,6 +1553,61 @@ flowchart LR
         <li>Librarian melakukan verifikasi identitas ke objek RegistrarDatabase (<code>3: ValidID()</code>).</li>
         <li>Librarian memeriksa denda/keterlambatan buku ke objek Borrower (<code>4: CheckOverdueBookOrFine()</code>).</li>
       </ol>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-12">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Diagram Interaksi Asli (PDF)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/Add appartment use case, sequence diagram.drawio.pdf" data-title="Add Apartment Sequence" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Add Apartment Sequence</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/BorrowBookSequenceDiagram.drawio.pdf" data-title="Borrow Book Sequence" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Borrow Book Sequence</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Sequence Diagram ATM.drawio.pdf" data-title="ATM Sequence Diagram" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">ATM Sequence Diagram</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/Sequence Diagram Alan Denis Make Appointment.drawio.pdf" data-title="Make Appointment Sequence" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Make Appointment Sequence</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/CommunicationDiagramMakeAppt.drawio.pdf" data-title="Make Appointment Collaboration" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Make Appointment Collaboration</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/CommunicationDiagramValidIDcardButOweABook.drawio.pdf" data-title="Valid ID Check Collaboration" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Valid ID Check Collaboration</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-12" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-12">Add Apartment Sequence.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-12">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-12" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
@@ -1445,6 +1674,45 @@ flowchart TD
         <li>Aplikasi frontend berkomunikasi menggunakan protokol aman HTTPS ke backend API (<code>node-backend.service</code>) di server web.</li>
         <li>Server web mengakses mesin PostgreSQL di server database menggunakan port default 5432.</li>
       </ul>
+
+      <div class="embedded-pdf-viewer" id="viewer-mod-13">
+        <div class="pdf-viewer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Viewer Diagram Implementasi Asli (PDF)
+        </div>
+        <div class="pdf-viewer-layout">
+          <div class="pdf-viewer-sidebar">
+            <div class="pdf-viewer-tab active" data-src="PDF/Pd layer appointment system.drawio.pdf" data-title="Appointment System Pd Layer" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Pd Layer Appointment</span>
+            </div>
+            <div class="pdf-viewer-tab" data-src="PDF/TrackOrder.drawio.pdf" data-title="Track Order Package" data-type="pdf">
+              <span class="file-icon pdf">PDF</span>
+              <span class="file-name">Track Order Package</span>
+            </div>
+          </div>
+          <div class="pdf-viewer-preview-pane">
+            <div class="pdf-viewer-frame-wrapper">
+              <iframe class="pdf-viewer-iframe" id="frame-viewer-mod-13" src=""></iframe>
+            </div>
+            <div class="pdf-viewer-fallback-pane hidden">
+              <div class="fallback-icon-box">
+                <i class="far fa-file-word"></i>
+              </div>
+              <h4>Dokumen Microsoft Word (.docx)</h4>
+              <p>File ini tidak dapat ditampilkan langsung di browser. Silakan unduh dokumen asli untuk membacanya di Microsoft Word.</p>
+              <a href="" class="btn-fallback-download" download>Unduh Berkas Word</a>
+            </div>
+            <div class="pdf-viewer-action-bar">
+              <span class="active-file-title" id="title-viewer-mod-13">Pd Layer Appointment.pdf</span>
+              <div class="action-buttons">
+                <button class="btn-viewer-action btn-fullscreen-view" id="fullscreen-viewer-mod-13">Layar Penuh</button>
+                <a href="" class="btn-viewer-action btn-download-file" id="download-viewer-mod-13" download>Unduh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `,
     quiz: [
       {
