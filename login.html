@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk | SAD & UML Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #131a26;
+      --bg-glass: rgba(19, 26, 38, 0.65);
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --accent-purple: #8b5cf6;
+      --accent-purple-glow: rgba(139, 92, 246, 0.3);
+      --accent-blue: #3b82f6;
+      --accent-blue-glow: rgba(59, 130, 246, 0.3);
+      --accent-rose: #f43f5e;
+      --accent-rose-glow: rgba(244, 63, 94, 0.2);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glows */
+    .glow-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 1;
+      opacity: 0.4;
+    }
+
+    .glow-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent-purple);
+      top: -150px;
+      left: -100px;
+      animation: float-1 20s infinite alternate;
+    }
+
+    .glow-2 {
+      width: 350px;
+      height: 350px;
+      background: var(--accent-blue);
+      bottom: -100px;
+      right: -100px;
+      animation: float-2 15s infinite alternate;
+    }
+
+    @keyframes float-1 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, 30px) scale(1.1); }
+    }
+
+    @keyframes float-2 {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(-30px, -50px) scale(1.05); }
+    }
+
+    /* Login Container & Card */
+    .login-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+    }
+
+    .login-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-glass);
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Header Section */
+    .login-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: #fff;
+      box-shadow: 0 0 20px var(--accent-purple-glow);
+    }
+
+    .logo-text h1 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #fff, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .logo-text p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Form Styles */
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .input-group label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-align: left;
+    }
+
+    .input-field {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .input-field:focus {
+      border-color: var(--accent-purple);
+      background-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 12px var(--accent-purple-glow);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      padding: 14px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+      margin-top: 10px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--accent-purple-glow);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    /* Error Alert Box */
+    .error-box {
+      display: none;
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(244, 63, 94, 0.05));
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fda4af;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .error-box-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .error-box svg {
+      flex-shrink: 0;
+    }
+
+    .login-footer {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-align: center;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient lights -->
+  <div class="glow-circle glow-1"></div>
+  <div class="glow-circle glow-2"></div>
+
+  <div class="login-container">
+    <div class="login-card">
+      
+      <!-- Header -->
+      <div class="login-header">
+        <div class="logo-icon">S</div>
+        <div class="logo-text">
+          <h1>SAD & UML</h1>
+          <p>Portal Pembelajaran Pemodelan Sistem</p>
+        </div>
+      </div>
+
+      <!-- Error Alert -->
+      <div class="error-box" id="error-banner">
+        <div class="error-box-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          Gagal Masuk
+        </div>
+        Username atau password yang Anda masukkan salah. Silakan periksa kembali kredensial Anda.
+      </div>
+
+      <!-- Login Form -->
+      <form class="login-form" action="/login" method="POST">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" class="input-field" placeholder="Masukkan username Anda" required autocomplete="username">
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" class="input-field" placeholder="Masukkan password Anda" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Masuk Portal
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Footer Info -->
+      <div class="login-footer">
+        Gunakan akun kredensial yang telah dikonfigurasi melalui Environment Variables Vercel.
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    // Client-side detection of ?error=1 in URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('error') === '1') {
+      document.getElementById('error-banner').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
