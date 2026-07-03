@@ -1,4 +1,5 @@
-# Documents (excluding PDF project files so they display on Vercel)
+# Documents (ignored since we now load them from Vercel Blob)
+*.pdf
 *.docx
 *.doc
 *.xlsx
@@ -6,8 +7,9 @@
 *.pptx
 *.ppt
 *.txt
+/PDF/
 
-# Images (excluding any embedded project images if needed)
+# Images
 *.png
 *.jpg
 *.jpeg

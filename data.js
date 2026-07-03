@@ -422,10 +422,10 @@ ENDWHILE</pre>
         <!-- DOKUMEN PDF ASLI -->
         <div class="pdf-page-block" id="pdf-page-pdf" style="height: 700px; display: none;">
           <div class="pdf-page-header">
-            <span>Berkas Dokumen Asli (png2pdf.pdf)</span>
+            <span>Berkas Dokumen Asli (https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/png2pdf.pdf)</span>
             <span class="pdf-page-num-badge">PDF Viewer</span>
           </div>
-          <iframe class="pdf-viewer-iframe" data-src="png2pdf.pdf" width="100%" height="100%" style="border: 1px solid var(--border-glass); border-radius: var(--border-radius-md); background-color: #0b0f19;"></iframe>
+          <iframe class="pdf-viewer-iframe" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/png2pdf.pdf" width="100%" height="100%" style="border: 1px solid var(--border-glass); border-radius: var(--border-radius-md); background-color: #0b0f19;"></iframe>
         </div>
 
         <!-- HALAMAN 1 -->
@@ -1002,11 +1002,11 @@ Close data_report</pre>
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/CRC Card Old patient.pdf" data-title="CRC Card Old Patient" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/CRC%20Card%20Old%20patient.pdf" data-title="CRC Card Old Patient" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">CRC Card Old Patient</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Template CRC.pdf" data-title="Template CRC Card" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Template%20CRC.pdf" data-title="Template CRC Card" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Template CRC Card</span>
             </div>
@@ -1120,11 +1120,11 @@ flowchart TD
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/Manage Appartement Availability.pdf" data-title="Manage Appartement Availability" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Manage%20Appartement%20Availability.pdf" data-title="Manage Appartement Availability" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Manage Appartement Availability</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Use Case Description Old patient appointment.pdf" data-title="Old Patient Appointment Desc" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Use%20Case%20Description%20Old%20patient%20appointment.pdf" data-title="Old Patient Appointment Desc" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Old Patient Appointment Desc</span>
             </div>
@@ -1273,11 +1273,11 @@ classDiagram
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/Class Diagram with Incorporated Pattern for the Library Book Collection System.drawio.pdf" data-title="Library Pattern Class Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Class%20Diagram%20with%20Incorporated%20Pattern%20for%20the%20Library%20Book%20Collection%20System.drawio.pdf" data-title="Library Pattern Class Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Pattern Class Diagram</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Second-Cut Class Diagram for the Library Book Collection System.drawio.pdf" data-title="Second-Cut Class Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Second-Cut%20Class%20Diagram%20for%20the%20Library%20Book%20Collection%20System.drawio.pdf" data-title="Second-Cut Class Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Second-Cut Class Diagram</span>
             </div>
@@ -1444,19 +1444,19 @@ stateDiagram-v2
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/Book State Diagram.drawio.pdf" data-title="Book State Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Book%20State%20Diagram.drawio.pdf" data-title="Book State Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Book State Diagram</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Lunch State Machine Diagram.drawio.pdf" data-title="Lunch State Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Lunch%20State%20Machine%20Diagram.drawio.pdf" data-title="Lunch State Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Lunch State Diagram</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Order State Machine.drawio.pdf" data-title="Order State Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Order%20State%20Machine.drawio.pdf" data-title="Order State Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Order State Diagram</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Patient State Machine Diagram.drawio.pdf" data-title="Patient State Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Patient%20State%20Machine%20Diagram.drawio.pdf" data-title="Patient State Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Patient State Diagram</span>
             </div>
@@ -1561,27 +1561,27 @@ flowchart LR
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/Add appartment use case, sequence diagram.drawio.pdf" data-title="Add Apartment Sequence" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Add%20appartment%20use%20case%2C%20sequence%20diagram.drawio.pdf" data-title="Add Apartment Sequence" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Add Apartment Sequence</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/BorrowBookSequenceDiagram.drawio.pdf" data-title="Borrow Book Sequence" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/BorrowBookSequenceDiagram.drawio.pdf" data-title="Borrow Book Sequence" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Borrow Book Sequence</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Sequence Diagram ATM.drawio.pdf" data-title="ATM Sequence Diagram" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Sequence%20Diagram%20ATM.drawio.pdf" data-title="ATM Sequence Diagram" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">ATM Sequence Diagram</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/Sequence Diagram Alan Denis Make Appointment.drawio.pdf" data-title="Make Appointment Sequence" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Sequence%20Diagram%20Alan%20Denis%20Make%20Appointment.drawio.pdf" data-title="Make Appointment Sequence" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Make Appointment Sequence</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/CommunicationDiagramMakeAppt.drawio.pdf" data-title="Make Appointment Collaboration" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/CommunicationDiagramMakeAppt.drawio.pdf" data-title="Make Appointment Collaboration" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Make Appointment Collaboration</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/CommunicationDiagramValidIDcardButOweABook.drawio.pdf" data-title="Valid ID Check Collaboration" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/CommunicationDiagramValidIDcardButOweABook.drawio.pdf" data-title="Valid ID Check Collaboration" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Valid ID Check Collaboration</span>
             </div>
@@ -1682,11 +1682,11 @@ flowchart TD
         </div>
         <div class="pdf-viewer-layout">
           <div class="pdf-viewer-sidebar">
-            <div class="pdf-viewer-tab active" data-src="PDF/Pd layer appointment system.drawio.pdf" data-title="Appointment System Pd Layer" data-type="pdf">
+            <div class="pdf-viewer-tab active" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/Pd%20layer%20appointment%20system.drawio.pdf" data-title="Appointment System Pd Layer" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Pd Layer Appointment</span>
             </div>
-            <div class="pdf-viewer-tab" data-src="PDF/TrackOrder.drawio.pdf" data-title="Track Order Package" data-type="pdf">
+            <div class="pdf-viewer-tab" data-src="https://fomh0ds9hmaafewl.private.blob.vercel-storage.com/PDF/TrackOrder.drawio.pdf" data-title="Track Order Package" data-type="pdf">
               <span class="file-icon pdf">PDF</span>
               <span class="file-name">Track Order Package</span>
             </div>
