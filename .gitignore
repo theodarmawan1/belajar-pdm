@@ -1,0 +1,33 @@
+# Documents (excluding PDF project files so they display on Vercel)
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.txt
+
+# Images (excluding any embedded project images if needed)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.ico
+*.eps
+*.ai
+*.drawio
+
+# OS / System Files
+.DS_Store
+Thumbs.db
+
+# Editor / IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
